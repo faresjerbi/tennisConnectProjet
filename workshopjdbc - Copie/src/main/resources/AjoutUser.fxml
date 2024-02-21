@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="586.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controllers.AjoutUserController">
+   <children>
+      <TabPane layoutY="3.0" prefHeight="579.0" prefWidth="754.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="affichage ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tfTableau" layoutX="14.0" layoutY="191.0" prefHeight="352.0" prefWidth="677.0">
+                          <columns>
+                            <TableColumn fx:id="colId" prefWidth="25.0" text="id" />
+                            <TableColumn fx:id="colNom" prefWidth="54.0" text="nom" />
+                              <TableColumn fx:id="colPrenom" prefWidth="67.0" text="prenom" />
+                              <TableColumn fx:id="colMail" prefWidth="64.0" text="mail" />
+                              <TableColumn fx:id="colPassword" prefWidth="84.0" text="password" />
+                              <TableColumn fx:id="colGenre" prefWidth="76.0" text="genre" />
+                              <TableColumn fx:id="colDate_de_naissance" prefWidth="120.0" text="date de naissance" />
+                              <TableColumn fx:id="colRole" prefWidth="50.0" text="role" />
+                              <TableColumn fx:id="colNiveau" prefWidth="50.0" text="niveau" />
+                              <TableColumn fx:id="colDisponibilite" prefWidth="86.0" text="disponibilite" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="tfId2" layoutX="509.0" layoutY="23.0" prefHeight="25.0" prefWidth="72.0" />
+                        <Button layoutX="616.0" layoutY="23.0" mnemonicParsing="false" onAction="#DeleteUser" text="supprimer" />
+                        <Label layoutX="482.0" layoutY="27.0" text="id" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="ajouter un utlilisateur">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="556.0" prefWidth="712.0">
+                     <children>
+                        <Label layoutX="15.0" layoutY="114.0" text="Nom" />
+                        <TextField fx:id="tfNom" layoutX="130.0" layoutY="110.0" />
+                        <Label layoutX="15.0" layoutY="162.0" text="Prenom" />
+                        <TextField fx:id="tfPrenom" layoutX="130.0" layoutY="158.0" />
+                        <Label layoutX="15.0" layoutY="210.0" text="mail" />
+                        <TextField fx:id="tfMail" layoutX="130.0" layoutY="206.0" />
+                        <Label layoutX="15.0" layoutY="247.0" text="mot de passe " />
+                        <TextField fx:id="tfPassword" layoutX="130.0" layoutY="243.0" />
+                        <Label layoutX="15.0" layoutY="288.0" text="genre" />
+                        <TextField fx:id="tfGenre" layoutX="130.0" layoutY="284.0" />
+                        <Label layoutX="15.0" layoutY="319.0" prefHeight="17.0" prefWidth="100.0" text="date de naissance" />
+                        <DatePicker fx:id="tfDate_de_naissance" layoutX="130.0" layoutY="315.0" prefHeight="25.0" prefWidth="149.0" />
+                        <Label layoutX="15.0" layoutY="361.0" text="role" />
+                        <TextField fx:id="tfRole" layoutX="130.0" layoutY="357.0" />
+                        <Label layoutX="15.0" layoutY="399.0" text="niveau" />
+                        <TextField fx:id="tfNiveau" layoutX="130.0" layoutY="395.0" />
+                        <Label layoutX="15.0" layoutY="436.0" text="disponibilite" />
+                        <TextField fx:id="tfDisponibilite" layoutX="130.0" layoutY="441.0" />
+                        <Button layoutX="392.0" layoutY="500.0" mnemonicParsing="false" onAction="#AddUser" text="valider" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="modifier un utlilisateur">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="556.0" prefWidth="712.0">
+                     <children>
+                        <Label layoutX="15.0" layoutY="114.0" text="Nom" />
+                        <TextField fx:id="tfNom1" layoutX="130.0" layoutY="110.0" />
+                        <Label layoutX="15.0" layoutY="162.0" text="Prenom" />
+                        <TextField fx:id="tfPrenom1" layoutX="130.0" layoutY="158.0" />
+                        <Label layoutX="15.0" layoutY="210.0" text="mail" />
+                        <TextField fx:id="tfMail1" layoutX="130.0" layoutY="206.0" />
+                        <Label layoutX="15.0" layoutY="247.0" text="mot de passe " />
+                        <TextField fx:id="tfPassword1" layoutX="130.0" layoutY="243.0" />
+                        <Label layoutX="15.0" layoutY="288.0" text="genre" />
+                        <TextField fx:id="tfGenre1" layoutX="130.0" layoutY="284.0" />
+                        <Label layoutX="13.0" layoutY="319.0" prefHeight="17.0" prefWidth="100.0" text="date de naissance" />
+                        <DatePicker fx:id="tfDate_de_naissance1" layoutX="130.0" layoutY="315.0" prefHeight="25.0" prefWidth="149.0" />
+                        <Label layoutX="15.0" layoutY="361.0" text="role" />
+                        <TextField fx:id="tfRole1" layoutX="130.0" layoutY="357.0" />
+                        <Label layoutX="15.0" layoutY="399.0" text="niveau" />
+                        <TextField fx:id="tfNiveau1" layoutX="130.0" layoutY="395.0" />
+                        <Label layoutX="15.0" layoutY="436.0" text="disponibilite" />
+                        <TextField fx:id="tfDisponibilite1" layoutX="130.0" layoutY="441.0" />
+                        <Button layoutX="392.0" layoutY="500.0" mnemonicParsing="false" onAction="#UpdateUser" text="modifier" />
+                        <Label layoutX="15.0" layoutY="68.0" text="Id" />
+                        <TextField fx:id="tfId" layoutX="130.0" layoutY="64.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
